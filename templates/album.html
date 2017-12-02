@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://getbootstrap.com/docs/4.0/examples/album/# -->
+<html lang="en" class="gr__getbootstrap_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title>Science Stack Explorer</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link href="{{ url_for('static',filename='css/album.css') }}"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+         
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+
+    <header>
+      <div class="bg-dark collapse show" id="navbarHeader" style="">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Every upcoming researcher backtracks to find solution to common problems. Most
+of the times he is directed to redundant sources and ends up wasting his precious
+time. This resource would aim at delivering precise results to user queries in the
+aforementioned domains. It uses SparQL and datasets based on N triples</p>
+            </div>
+            <div class="col-sm-4 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://twitter.com/KDeolal" class="text-white">Follow on Twitter</a></li>
+                <li><a href="https://www.facebook.com/kaustuv.deolal" class="text-white">Like on Facebook</a></li>
+                <li><a href="https://github.com/Vutsuak16" class="text-white">Follow on Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+          <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="navbar-brand">Science Stack Explorer</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container" >
+          <h2 style="padding-right:50px" class="jumbotron-heading" >Sparql Query</h2>
+          <div class="form-group">
+            <form action="{{ url_for('submit') }}" method="post">
+              <textarea name="text" cols="45" rows="7"></textarea>
+              <input class="btn btn-primary" type="submit"></input>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="album text-muted">
+        <div class="container">
+
+          <div class="row">
+            <div class="card">
+            <a href="/query1">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/hcnews.png') }}" data-holder-rendered="true"></a>
+              <p class="card-text">This is a query to find all the posts and comments after Jan-1-2017.This helps user filter out top posts and the most recent ones</p>
+            </div>
+            <div class="card">
+          <a href="/query2">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/math.png') }}" data-holder-rendered="true"></a>
+              <p class="card-text">This query takes a keyword as an Input and finds the title in various Math ML journals containing the keyword.</p>
+            </div>
+            <div class="card">
+              <a href="query3">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/chemistry.png') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">This is a query to find the only person who has won a noble price twice,which is a great feat altogether and a obvious scientific break.</p>
+            </div>
+
+            <div class="card">
+            <a href="query4">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/books.jpg') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">This is a query to find all the books which are in our books database with total rating greater than 7</p>
+            </div>
+            <div class="card">
+              <a href="query5">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/biolog.png') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">This is a query to find the only person who has won a noble price twice,which is a great feat altogether and a obvious scientific break.</p>
+            </div>
+            <div class="card">
+            <a href="query6">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/physics.png') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">
+                Displaying Top 10 Users with max votes in Scientific Stack Exchange Database. These are the most popular users with maximum credibility to their answers.
+              </p>
+            </div>
+
+            <div class="card">
+              <a href="query7">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/math.png') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">This is a query to find the only person who has won a noble price twice,which is a great feat altogether and a obvious scientific break.</p>
+            </div>
+            <div class="card">
+              <a href="query8">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/books.jpg') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">This is a query to find the only person who has won a noble price twice,which is a great feat altogether and a obvious scientific break.</p>
+            </div>
+            <div class="card">
+              <a href="query9">
+          <img  alt="Thumbnail [100%x280]" style="height: 280px; width: 100%; display: block;" src="{{url_for('static',filename='images/hcnews.png') }}" data-holder-rendered="true">
+        </a>
+              <p class="card-text">This query takes input a particular keyword.It in turn returns all the users who have written posts and comments with that prticular keyword in it</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    
+   
+    <script src="{{url_for('static',filename='js/jquery-3.2.1.slim.min.js')}}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"><\/script>')</script>
+    <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/holder.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  
+
+<svg xmlns="http://www.w3.org/2000/svg" width="356" height="280" viewBox="0 0 356 280" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="18" style="font-weight:bold;font-size:18pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg></body></html>

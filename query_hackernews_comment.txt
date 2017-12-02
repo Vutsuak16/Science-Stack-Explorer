@@ -1,0 +1,13 @@
+SELECT  ?TIME ?COMMENT ?username
+  WHERE
+  {
+  ?PERSON <http://127.0.0.1:3333/hasCommentValue> ?COMMENT.
+?PERSON <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasUserName> ?username.
+
+?PERSON <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasTime> ?TIME 
+ 
+
+  	FILTER(CONTAINS(str(?COMMENT),"Tell"))
+}
+  
+      limit 25

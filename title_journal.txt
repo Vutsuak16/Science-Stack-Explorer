@@ -1,0 +1,15 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+SELECT DISTINCT ?title ?object ?domain ?year ?source ?lname ?fname ?suffix
+WHERE {
+  ?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasID> ?object.
+  ?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasTitle> ?title.
+  ?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasLastName> ?lname.
+  ?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasFirstName> ?fname.
+  OPTIONAL{?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#hasSuffix> ?suffix}.
+  ?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#publishedIn> ?year.
+  ?subject <http://www.semanticweb.org/mahimagupta/ontologies/2017/9/untitled-ontology-6#from> ?source.
+  ?subject rdfs:domain ?domain   
+  FILTER (contains(str(?title), "geometry"))
+}
