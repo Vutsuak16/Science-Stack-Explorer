@@ -1,5 +1,8 @@
+import os
 import pandas as pd
 from flask import Flask, request, redirect, url_for, render_template
+import json
+import rdflib
 from SPARQLWrapper import SPARQLWrapper, JSON
 from pandas.io.json import json_normalize
 
@@ -58,9 +61,8 @@ def query2_journal():
 @app.route("/query3")
 def query3():
     
-    if request.method=="POST":
-        return render_template("query.html")
-    return render_template("input.html")
+    
+    return render_template("medicine.html")
     #return render_template('query1.html')
 
 @app.route("/query4")
@@ -73,9 +75,8 @@ def query4():
 @app.route("/query5")
 def query5():
     
-    if request.method=="POST":
-        return render_template("query.html")
-    return render_template("input.html")
+    
+    return render_template("vbar.html")
     #return render_template('query1.html')
 
 @app.route("/query6")
@@ -88,17 +89,13 @@ def query6():
 @app.route("/query7")
 def query7():
     
-    if request.method=="POST":
-        return render_template("query.html")
-    return render_template("input.html")
+    return render_template("union.html")
     #return render_template('query1.html')
 
 @app.route("/query8")
 def query8():
     
-    if request.method=="POST":
-        return render_template("query.html")
-    return render_template("input.html")
+    return render_template("oxford.html")
     #return render_template('query1.html')
 
 
