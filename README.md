@@ -1,3 +1,11 @@
-# Flask-DataAnalysis
-It is a webapp , for analyzing your data. You need to upload your excel/csv in the webapp and get the data analyzed
-The server is powered by flask. 
+# HOW TO RUN
+
+RUN THE APACHE SERVER:
+	
+	'''
+		./fuseki-server --update --mem /ds
+
+RUN THE FLASK SERVER:
+
+	'''
+		python3 science.py
